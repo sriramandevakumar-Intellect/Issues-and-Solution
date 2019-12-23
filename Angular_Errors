@@ -1,3 +1,33 @@
+Error:
+ chunk {0} runtime.a66f828dca56eeb90e02.js (runtime) 1
+ ERROR in ./node_modules/@syncfusion/ej2-angular-richtexteditor/@syncfusion/ej2-angular-richtexteditor.es5.js
+ Module build faile.05 kB [entry] [rendered]
+
+Solution :
+
+Update Syncfusion npm package
+The latest Syncfusion npm package can be updated with the help of npm-check-updates package.
+
+You can install the npm-check-update package globally to use this as CLI.
+
+npm install -g npm-check-updates
+ncu -u -f /^@syncfusion/
+This will update the package.json file to latest version for all @syncfusion packages.
+
+Now, run the following commands to update the packages in node_modules and remove the duplicate package which is already installed.
+
+npm update
+npm dedupe
+Updating a specific npm package
+Run the following commands from the command prompt in the application root to update a specific npm package in node_modules and remove the installed duplicate package.
+
+```bash
+npm update @syncfusion/ej2-grids
+npm update @syncfusion/ej2-angular-grids
+npm dedupe
+```
+
+----------------------------------------------------------------------------------------------------------------------------------------
 Error :
 error cb() never called! 21409 error This is an error with npm itself
 
@@ -5,21 +35,21 @@ Solution :
 Permission denied to location so please change the location.
 
 
-
+----------------------------------------------------------------------------------------------------------------------------------------
 
 Error :
 Node Sass does not yet support your current environment: Windows 64-bit with Unsupported runtime
 
 Solution :
 npm install node-sass
-
+----------------------------------------------------------------------------------------------------------------------------------------
 Error:
 Module not found: Error: Can't resolve '@syncfusion/ej2-angular-richtexteditor' in 'D:\0_Sriraman\Project\CLODEMOSERVER\LOSAPP_NEW\LOSAPP\src\app'
 
 Solution :
 Add the "@syncfusion/ej2": "^17.3.14"" and ""@syncfusion/ej2-angular-richtexteditor": "^17.2.52"" in pakage.json
 Then run "npm install"
-
+----------------------------------------------------------------------------------------------------------------------------------------
 Error:
 ERROR Error: Uncaught (in promise): Error: Cannot match any routes. URL Segment: 'doccomponent'
 Error: Cannot match any routes. URL Segment: 'doccomponent'
@@ -32,7 +62,7 @@ Add below code in app-routing.module.ts
      path: 'doccomponent',
      component: DoccomponentComponent
   },
-
+----------------------------------------------------------------------------------------------------------------------------------------
 Error : 
  error TS2377: Constructors for derived classes must contain a 'super' call.
  
